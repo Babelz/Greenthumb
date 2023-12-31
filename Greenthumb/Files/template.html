@@ -1,0 +1,89 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content=width=device-width">
+    <title>Hoitokalenteri</title>
+    <style>
+        @page {
+            margin-top: 100px;
+            margin-bottom: -100px;
+        }
+
+        table {
+            page-break-inside: auto
+        }
+
+        tr {
+            page-break-inside: avoid;
+            page-break-after: auto
+        }
+
+        thead {
+            display: table-header-group
+        }
+
+        tfoot {
+            display: table-footer-group
+        }
+
+        body {
+            margin: 1cm;
+            font-family: Arial, sans-serif;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1cm;
+        }
+
+        thead {
+            display: table-header-group; /* Header is displayed on each page, not duplicated */
+        }
+
+        .date_column {
+            max-width: 15px;
+            word-wrap: unset;
+            border: 3px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .task_list_column {
+            max-width: 150px;
+            word-wrap: break-word;
+            border: 3px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .completed_column {
+            max-width: 25px;
+            word-wrap: break-word;
+            border: 3px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .notes_column {
+            max-width: 45px;
+            word-wrap: break-word;
+            border: 3px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .centered {
+            text-align: center;
+            color: #333;
+        }
+
+        .spaced-li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+GENERATED_HTML
+</body>
+</html>

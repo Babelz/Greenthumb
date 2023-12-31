@@ -1,0 +1,474 @@
+[
+  {
+    "Name": "Soihtuköynnös",
+    "SoilChangedAt": "2024-1-1",
+    "SoilFertilizedAt": "2024-1-1",
+    "WateredAt": "2024-1-1",
+    "Regimen": {
+      "SoilChange": {
+        "SoilType": "kukka tai viherkasvimulta",
+        "Every": "2/y",
+        "Season": "Spring"
+      },
+      "Fertilization": [
+        {
+          "Occurrence": "1/m",
+          "FertilizerType": "viherkasviravinne tai kasviravinne",
+          "Seasons": [
+            "Spring",
+            "Fall"
+          ]
+        }
+      ],
+      "Watering": [
+        {
+          "Occurrence": "2/w",
+          "Condition": "jos multa on kuivahtunut",
+          "Notes": "sumuta jos ei kuki"
+        }
+      ]
+    }
+  },
+  {
+    "Name": "Kultapalmu",
+    "SoilChangedAt": "2024-1-1",
+    "SoilFertilizedAt": "2024-1-1",
+    "WateredAt": "2024-1-1",
+    "Regimen": {
+      "SoilChange": {
+        "SoilType": "viherkasvimulta",
+        "Every": "1/y",
+        "Season": "Spring"
+      },
+      "Fertilization": [
+        {
+          "Occurrence": "2/m",
+          "FertilizerType": "kastelulannoite"
+        }
+      ],
+      "Watering": [
+        {
+          "Seasons": [
+            "Summer",
+            "Fall"
+          ],
+          "Occurrence": "4/w",
+          "Condition": "jos multa on vielä hieman kostea",
+          "Notes": "sumuta jos lehdillä ei ole kosteutta"
+        },
+        {
+          "Seasons": [
+            "Winter",
+            "Spring"
+          ],
+          "Occurrence": "2/w",
+          "Condition": "jos multa on hiukan kuivahtanut"
+        }
+      ]
+    }
+  },
+  {
+    "Name": "Aaltomaija",
+    "SoilChangedAt": "2024-1-1",
+    "SoilFertilizedAt": "2024-1-1",
+    "WateredAt": "2024-1-1",
+    "Regimen": {
+      "SoilChange": {
+        "SoilType": "viherkasvimulta",
+        "Every": "1/y",
+        "Season": "Spring"
+      },
+      "Fertilization": [
+        {
+          "Seasons": [
+            "Spring",
+            "Summer"
+          ],
+          "Occurrence": "4/w",
+          "FertilizerType": "kastelulannoite"
+        }
+      ],
+      "Watering": [
+        {
+          "Occurrence": "3/w",
+          "Condition": "jos pintamulta on hieman kuivunut",
+          "Notes": "sumuta jos lehdillä ei ole kosteutta"
+        }
+      ]
+    }
+  },
+  {
+    "Name": "Kolmiokäenkaali",
+    "SoilChangedAt": "2024-1-1",
+    "SoilFertilizedAt": "2024-1-1",
+    "WateredAt": "2024-1-1",
+    "Regimen": {
+      "SoilChange": {
+        "SoilType": "viherkasvimulta",
+        "Every": "1/y",
+        "Season": "Spring"
+      },
+      "Fertilization": [
+        {
+          "Seasons": [
+            "Spring",
+            "Fall"
+          ],
+          "Occurrence": "1/w",
+          "FertilizerType": "kastelulannoite"
+        }
+      ],
+      "Watering": [
+        {
+          "Occurrence": "2/w",
+          "Condition": "kastele reilusti jos pintamulta on kuivunut"
+        }
+      ]
+    }
+  },
+  {
+    "Name": "Kodinonni",
+    "SoilChangedAt": "2024-1-1",
+    "SoilFertilizedAt": "2024-1-1",
+    "WateredAt": "2024-1-1",
+    "Regimen": {
+      "SoilChange": {
+        "SoilType": "viherkasvimulta",
+        "Every": "1/y",
+        "Season": "Spring"
+      },
+      "Fertilization": [
+        {
+          "Seasons": [
+            "Spring",
+            "Summer"
+          ],
+          "Occurrence": "1/w",
+          "FertilizerType": "huonekasvilannoite"
+        },
+        {
+          "Seasons": [
+            "Fall",
+            "Winter"
+          ],
+          "Occurrence": "1/m",
+          "FertilizerType": "huonekasvilannoite"
+        }
+      ],
+      "Watering": [
+        {
+          "Occurrence": "3/w",
+          "Condition": "pidä multa kosteana kasteluiden välillä",
+          "Notes": "sumuta jos kasvin päällä ei ole kosteutta"
+        }
+      ]
+    }
+  },
+  {
+    "Name": "Parsa",
+    "SoilChangedAt": "2024-1-1",
+    "SoilFertilizedAt": "2024-1-1",
+    "WateredAt": "2024-1-1",
+    "Regimen": {
+      "SoilChange": {
+        "SoilType": "viherkasvimulta",
+        "Every": "1/y",
+        "Season": "Spring"
+      },
+      "Fertilization": [
+        {
+          "Seasons": [
+            "Spring",
+            "Fall"
+          ],
+          "Occurrence": "1/w",
+          "FertilizerType": "kastelulannoite"
+        }
+      ],
+      "Watering": [
+        {
+          "Occurrence": "2/w",
+          "Condition": "kastele runsaasti jos multa on kuiva",
+          "Notes": "sumuta"
+        }
+      ]
+    }
+  },
+  {
+    "Name": "Puikkokämmekkä",
+    "SoilChangedAt": "2024-1-1",
+    "SoilFertilizedAt": "2024-1-1",
+    "WateredAt": "2024-1-1",
+    "Regimen": {
+      "SoilChange": {
+        "SoilType": "orkideamulta",
+        "Every": "1/y",
+        "Season": "Spring"
+      },
+      "Fertilization": [
+        {
+          "Seasons": [
+            "Spring",
+            "Summer"
+          ],
+          "Occurrence": "1/w",
+          "FertilizerType": "orkidearavinne",
+          "Notes": "kukkivana ei tarvitse lannoitetta"
+        }
+      ],
+      "Watering": [
+        {
+          "Occurrence": "1/w",
+          "Condition": "upota veteen noin ~10min ajaksi",
+          "Notes": "katso että ruukun pohjalla on tarpeeksi vettä"
+        }
+      ]
+    }
+  },
+  {
+    "Name": "Perhosorkidea",
+    "SoilChangedAt": "2024-1-1",
+    "SoilFertilizedAt": "2024-1-1",
+    "WateredAt": "2024-1-1",
+    "Regimen": {
+      "SoilChange": {
+        "SoilType": "orkideamulta",
+        "Every": "1/y",
+        "Season": "Spring"
+      },
+      "Fertilization": [
+        {
+          "Seasons": [
+            "Spring",
+            "Summer"
+          ],
+          "Occurrence": "1/w",
+          "FertilizerType": "orkidearavinne",
+          "Notes": "kukkivana ei tarvitse lannoitetta"
+        }
+      ],
+      "Watering": [
+        {
+          "Occurrence": "1/w",
+          "Condition": "upota veteen noin ~10min ajaksi",
+          "Notes": "katso että ruukun pohjalla on tarpeeksi vettä"
+        }
+      ]
+    }
+  },
+  {
+    "Name": "Saniainen",
+    "SoilChangedAt": "2024-1-1",
+    "SoilFertilizedAt": "2024-1-1",
+    "WateredAt": "2024-1-1",
+    "Regimen": {
+      "SoilChange": {
+        "SoilType": "mehikasvimulta",
+        "Every": "1/y",
+        "Season": "Spring"
+      },
+      "Fertilization": [
+        {
+          "Seasons": [
+            "Spring",
+            "Fall"
+          ],
+          "Occurrence": "1/w",
+          "FertilizerType": "kastelulannoite"
+        }
+      ],
+      "Watering": [
+        {
+          "Occurrence": "3/w",
+          "Condition": "pidä multa kosteana, ei saa olla litimärkä",
+          "Notes": "sumuta"
+        }
+      ]
+    }
+  },
+  {
+    "Name": "Muraatti",
+    "SoilChangedAt": "2024-1-1",
+    "SoilFertilizedAt": "2024-1-1",
+    "WateredAt": "2024-1-1",
+    "Regimen": {
+      "SoilChange": {
+        "SoilType": "viherkasvimulta",
+        "Every": "1/y",
+        "Season": "Spring"
+      },
+      "Fertilization": [
+        {
+          "Seasons": [
+            "Spring",
+            "Summer"
+          ],
+          "Occurrence": "3/w",
+          "FertilizerType": "kastelulannoite"
+        },
+        {
+          "Seasons": [
+            "Fall",
+            "Winter"
+          ],
+          "Occurrence": "1/m",
+          "FertilizerType": "kastelulannoite"
+        }
+      ],
+      "Watering": [
+        {
+          "Occurrence": "3/w",
+          "Condition": "jos multa on hieman kuivaa",
+          "Notes": "sumuta jos lehdet ovat kuivat"
+        }
+      ]
+    }
+  },
+  {
+    "Name": "Kallioimarre",
+    "SoilChangedAt": "2024-1-1",
+    "SoilFertilizedAt": "2024-1-1",
+    "WateredAt": "2024-1-1",
+    "Regimen": {
+      "SoilChange": {
+        "SoilType": "viherkasvimulta",
+        "Every": "1/y",
+        "Season": "Spring"
+      },
+      "Watering": [
+        {
+          "Occurrence": "1/w",
+          "Condition": "jos multa on kuivunut lähes kokonaan"
+        }
+      ]
+    }
+  },
+  {
+    "Name": "Pennimuori",
+    "SoilChangedAt": "2024-1-1",
+    "SoilFertilizedAt": "2024-1-1",
+    "WateredAt": "2024-1-1",
+    "Regimen": {
+      "SoilChange": {
+        "SoilType": "viherkasvimulta",
+        "Every": "1/y",
+        "Season": "Spring"
+      },
+      "Fertilization": [
+        {
+          "Seasons": [
+            "Spring",
+            "Fall"
+          ],
+          "Occurrence": "1/m",
+          "FertilizerType": "kastelulannoite"
+        }
+      ],
+      "Watering": [
+        {
+          "Occurrence": "1/w",
+          "Condition": "jos multa on kuivunut lähes kokonaan"
+        }
+      ]
+    }
+  },
+  {
+    "Name": "Muorinkukka",
+    "SoilChangedAt": "2024-1-1",
+    "SoilFertilizedAt": "2024-1-1",
+    "WateredAt": "2024-1-1",
+    "Regimen": {
+      "SoilChange": {
+        "SoilType": "viherkasvimulta",
+        "Every": "1/y",
+        "Season": "Spring"
+      },
+      "Fertilization": [
+        {
+          "Seasons": [
+            "Spring",
+            "Summer"
+          ],
+          "Occurrence": "2/m",
+          "FertilizerType": "kastelulannoite"
+        }
+      ],
+      "Watering": [
+        {
+          "Occurrence": "1/w",
+          "Condition": "jos multa on kuivunut lähes kokonaan"
+        }
+      ]
+    }
+  },
+  {
+    "Name": "Pylvästyräkki",
+    "SoilChangedAt": "2024-1-1",
+    "SoilFertilizedAt": "2024-1-1",
+    "WateredAt": "2024-1-1",
+    "Regimen": {
+      "SoilChange": {
+        "SoilType": "mehikasvimulta",
+        "Every": "1/y",
+        "Season": "Spring"
+      },
+      "Fertilization": [
+        {
+          "Seasons": [
+            "Spring",
+            "Summer"
+          ],
+          "Occurrence": "1/m",
+          "FertilizerType": "kastelulannoite"
+        }
+      ],
+      "Watering": [
+        {
+          "Seasons": [
+            "Summer",
+            "Fall"
+          ],
+          "Occurrence": "1/w",
+          "Condition": "kastele normaalisti jos multa on kuivunut kunnolla"
+        },
+        {
+          "Seasons": [
+            "Winter",
+            "Spring"
+          ],
+          "Occurrence": "2/m",
+          "Condition": "kastele niukasti jos multa on kuivunut kunnoolla"
+        }
+      ]
+    }
+  },
+  {
+    "Name": "Pullojukka",
+    "SoilChangedAt": "2024-1-1",
+    "SoilFertilizedAt": "2024-1-1",
+    "WateredAt": "2024-1-1",
+    "Regimen": {
+      "SoilChange": {
+        "SoilType": "viherkasvimulta",
+        "Every": "1/y",
+        "Season": "Spring"
+      },
+      "Fertilization": [
+        {
+          "Seasons": [
+            "Spring",
+            "Fall"
+          ],
+          "Occurrence": "2/m",
+          "FertilizerType": "kastelulannoite"
+        }
+      ],
+      "Watering": [
+        {
+          "Occurrence": "1/w",
+          "Condition": "jos multa on kuivunut kunnolla, kastele reilusti"
+        }
+      ]
+    }
+  }
+]
