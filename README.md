@@ -1,8 +1,14 @@
-# Greenthumb.
-Small utility for generating plant regimen calendars.
+# Greenthumb
+Keep your plants happy. Generates plant regimen calendar for the year based on what plants you have at home.
 
-## How to use
-- Fill in the plants and their regimen in plants.json
-- Run the tool ```./Greenthumb 2024 /out/path``` - params are the year the calendar will be generated for the output directory
+### Building
+Build with ```dotnet build``` or via your favourite IDE.  
 
-The tool generates engineer level HTML calendar that you can then print, enjoy.
+---
+
+### Running
+Populate the ```plants.json``` with your plants and their regiments. Then run ```./Greenthumb --year [year] --output --[output]``` to generate the calendar. 
+
+---
+### License
+WTFPL. See ```license.txt```.
