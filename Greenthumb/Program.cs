@@ -2,15 +2,33 @@
 using System.Globalization;
 using System.Text;
 using System.Text.Json;
-using System.Text.Json.Serialization.Metadata;
-using System.Text.RegularExpressions;
-using Ardalis.SmartEnum;
+using CommandLine;
+using CommandLine.Text;
 using Greenthumb.Models;
 using Greenthumb.Utils;
-using HtmlAgilityPack;
+
 using Calendar = Greenthumb.Models.Calendar;
 
 namespace Greenthumb;
+
+public sealed class Options
+{
+    #region Properties
+    [Option('y', "year", Required = true, HelpText = "epoch year for which the calendar will be generated")]
+    public int Year
+    {
+        get;
+        set;
+    }
+
+    [Option('o', "output", Required = true, HelpText = "output folder where the generated calendar files will be created")]
+    public string OutDirectory
+    {
+        get;
+        set;
+    }
+    #endregion
+}
 
 public static class Program
 {
@@ -280,47 +298,42 @@ public static class Program
 
     public static void Main(string[] args)
     {
-        if (!Args.TryParseYear(args, out var year))
+        var results = Parser.Default.ParseArguments<Options>(args);
+
+        results.WithParsed(options =>
         {
-            Log.Error("could not parse year from arguments");
+            if (!InitializeOutDirectory(options.OutDirectory))
+            {
+                Log.Error("could not initialize out directory, ensure the format is correct path");
 
-            return;
-        }
+                return;
+            }
 
-        if (!Args.TryParseOutDir(args, out var directory))
+            Log.Info($"generating calendar for year {options.Year}...");
+
+            var calendar     = new Calendar(options.Year);
+            var instructions = new RegimenInstructions();
+            var plants       = LoadPlants();
+
+            foreach (var plant in plants)
+            {
+                Log.Info($"generating plant regime calendar and instructions for plant \"{plant.Name}\"");
+
+                GenerateSoilChangeTasks(plant, calendar);
+                GenerateFertilizationTasks(plant, calendar);
+                GenerateWateringTasks(plant, calendar);
+
+                GenerateSoilChangeInstructions(plant, instructions);
+                GenerateFertilizationInstructions(plant, instructions);
+                GenerateWateringInstructions(plant, instructions);
+            }
+
+            GenerateCalendarHtml(calendar, options.OutDirectory);
+            GenerateInstructionsHtml(instructions, options.OutDirectory);
+        }).WithNotParsed(errors =>
         {
-            Log.Error("could not parse out directory from arguments");
-
-            return;
-        }
-
-        if (!InitializeOutDirectory(directory))
-        {
-            Log.Error("could not initialize out directory, ensure the format is correct path");
-
-            return;
-        }
-
-        Log.Info($"generating calendar for year {year}...");
-
-        var calendar     = new Calendar(year);
-        var instructions = new RegimenInstructions();
-        var plants       = LoadPlants();
-
-        foreach (var plant in plants)
-        {
-            Log.Info($"generating plant regime calendar and instructions for plant \"{plant.Name}\"");
-
-            GenerateSoilChangeTasks(plant, calendar);
-            GenerateFertilizationTasks(plant, calendar);
-            GenerateWateringTasks(plant, calendar);
-
-            GenerateSoilChangeInstructions(plant, instructions);
-            GenerateFertilizationInstructions(plant, instructions);
-            GenerateWateringInstructions(plant, instructions);
-        }
-
-        GenerateCalendarHtml(calendar, directory);
-        GenerateInstructionsHtml(instructions, directory);
+            if (errors.Any(e => e.Tag != ErrorType.HelpRequestedError))
+                Log.Error("failed to parse command line arguments, run the application with --help to see list of parameters");
+        });
     }
 }
